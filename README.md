@@ -8,5 +8,7 @@ Advent of Code 2017! :star2:
   - script files, likewise, are named `1.jl`/`2.jl`
   - test files, likewise, are named `test-1.jl`/`test-2.jl`
 - shared functions are exported in an `AoC` module under `util`
+- templates (to save the effort of rewriting the same format each day) are under `templates`
+  - these are set up in the day's directory when `download-puzzle.sh` is executed
 
 Happy holidays all :-)
