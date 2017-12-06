@@ -67,5 +67,3 @@ first few squares would receive the following values:
 
 What is the *first value written* that is *larger* than your puzzle
 input?
-
-Your puzzle input is still `325489`{.puzzle-input}.
