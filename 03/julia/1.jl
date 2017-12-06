@@ -1,6 +1,6 @@
 include("../../util/aoc.jl")
 using AoC
-import DataStructures: OrderedDict
+import DataStructures: OrderedDict, merge
 
 """
 each successive spiral adds (n+2)^2-(n^2)
@@ -78,6 +78,19 @@ function solve(loc::String)
     c = parse(Int64, loc) |> coord
     d = mdist(o, c)
     return d
+end
+
+
+"""
+Enumerate all coordinates up to a given spiral ('walk' to spiral `n`).
+"""
+function walk(n)
+    cds = OrderedDict(1 => [0,0])
+    n > 0 || return cds
+    for i in 1:n
+        cds = merge(cds, perimeter(i))
+    end
+    return cds
 end
 
 solution = solve(@aoc_in)
